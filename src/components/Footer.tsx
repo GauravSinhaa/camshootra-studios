@@ -21,7 +21,12 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-xs text-[#B6AEA1]">
               <li>
                 <a href="#portfolio" className="hover:text-[#E6CFA8]">
-                  Selected Photography
+                  Curated Photography
+                </a>
+              </li>
+              <li>
+                <a href="#motion" className="hover:text-[#E6CFA8]">
+                  Cinema & Brand Films
                 </a>
               </li>
               <li>

@@ -440,6 +440,126 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
 ];
 
+export interface VideoItem {
+  id: string;
+  title: string;
+  client: string;
+  category:
+    | 'Commercial & Spirits'
+    | 'Hospitality & Travel'
+    | 'Events & Culture'
+    | 'Culinary & Mixology'
+    | 'Commercial & Wellness';
+  videoSrc: string;
+  posterSrc: string;
+  aspect: 'landscape' | 'portrait';
+  duration: string;
+  year: string;
+  deliverables: string[];
+  description: string;
+}
+
+export const VIDEO_ITEMS: VideoItem[] = [
+  {
+    id: 'rivoli-macallan',
+    title: 'The Macallan × Rivoli — Prestige Lounge Film',
+    client: 'The Macallan • Edrington',
+    category: 'Commercial & Spirits',
+    videoSrc: '/videos/rivoli_macallan_brand_film.mp4',
+    posterSrc: '/videos/posters/rivoli_macallan.jpg',
+    aspect: 'landscape',
+    duration: '0:45',
+    year: '2024',
+    deliverables: ['Prestige Brand Film', '4K Commercial Edit', 'Color Grading & Sound Design'],
+    description:
+      'Cinematic atmosphere and rare single malt pour choreography for The Macallan private Rivoli salon evening.',
+  },
+  {
+    id: 'macallan-harmony-coffee',
+    title: 'The Macallan Harmony — Intense Arabica Mixology',
+    client: 'The Macallan • Edrington',
+    category: 'Commercial & Spirits',
+    videoSrc: '/videos/macallan_harmony_coffee.mp4',
+    posterSrc: '/videos/posters/macallan_harmony.jpg',
+    aspect: 'landscape',
+    duration: '0:54',
+    year: '2025',
+    deliverables: ['Mixology Feature Film', 'Macro Pour Stills', 'Social Cutdowns'],
+    description:
+      'High-craft cocktail film exploring the alchemy of Ethiopian Arabica notes married with The Macallan single malt.',
+  },
+  {
+    id: 'jose-cuervo-sneakerfest',
+    title: 'Jose Cuervo × Sneakerfest — Street Culture Reel',
+    client: 'Jose Cuervo • Monika Alcobev',
+    category: 'Events & Culture',
+    videoSrc: '/videos/jose_cuervo_sneakerfest.mp4',
+    posterSrc: '/videos/posters/jose_cuervo_sneakerfest.jpg',
+    aspect: 'portrait',
+    duration: '0:42',
+    year: '2025',
+    deliverables: ['High-Energy Event Reel', 'Vertical 9:16 Social Edit', 'Sound Sync'],
+    description:
+      'Fast-paced rhythmic reel capturing youth culture, tequila cocktail stations, and streetwear energy at Sneakerfest.',
+  },
+  {
+    id: 'ibw-mcdowell',
+    title: "India Bike Week × McDowell's — Festival Aftermovie",
+    client: "McDowell's Luxury • Diageo",
+    category: 'Events & Culture',
+    videoSrc: '/videos/ibw_mcdowell_festival.mp4',
+    posterSrc: '/videos/posters/ibw_mcdowell.jpg',
+    aspect: 'portrait',
+    duration: '0:48',
+    year: '2025',
+    deliverables: ['Festival Aftermovie', 'Rock Stage & Crowd Capture', 'Brand Activation Reel'],
+    description:
+      'High-octane motorcycle festival documentation uniting custom choppers, rock stage lights, and luxury hospitality pavilions.',
+  },
+  {
+    id: 'the-roseate-resort',
+    title: 'The Roseate — Serenity & Water Architecture',
+    client: 'The Roseate Hotels & Resorts',
+    category: 'Hospitality & Travel',
+    videoSrc: '/videos/the_roseate_luxury_resort.mp4',
+    posterSrc: '/videos/posters/the_roseate.jpg',
+    aspect: 'portrait',
+    duration: '1:41',
+    year: '2025',
+    deliverables: ['Architectural Film', 'Luxury Hospitality Showcase', 'Ambient Soundscape'],
+    description:
+      'Atmospheric architectural film exploring reflecting water bodies, tranquil suites, and fine dining sanctuaries at The Roseate.',
+  },
+  {
+    id: 'the-fitness-bar',
+    title: 'The Fitness Bar — Energy & Cold-Pressed Nutrition',
+    client: 'The Fitness Bar',
+    category: 'Commercial & Wellness',
+    videoSrc: '/videos/the_fitness_bar_promo.mp4',
+    posterSrc: '/videos/posters/the_fitness_bar.jpg',
+    aspect: 'portrait',
+    duration: '0:27',
+    year: '2025',
+    deliverables: ['Commercial Reel', 'Cold-Pressed Beverage Motion', 'Lifestyle Social Kit'],
+    description:
+      'Dynamic short-form commercial featuring cold-pressed elixirs, active lifestyle framing, and vibrant beverage styling.',
+  },
+  {
+    id: 'alchemy-of-taste',
+    title: 'Mastering The Alchemy of Taste — Culinary Texture',
+    client: 'Haute Gastronomie Series',
+    category: 'Culinary & Mixology',
+    videoSrc: '/videos/alchemy_of_taste_culinary.mp4',
+    posterSrc: '/videos/posters/alchemy_of_taste.jpg',
+    aspect: 'portrait',
+    duration: '0:42',
+    year: '2025',
+    deliverables: ['Culinary Cinema', 'Macro Texture Stills', 'Tableside Storytelling'],
+    description:
+      'Macro culinary cinema capturing the silkiness of jellied sweetcorn, contrasting fried crunch, and tableside gastronomic artistry.',
+  },
+];
+
 export interface ServicePillar {
   number: string;
   id: string;
@@ -660,8 +780,11 @@ export const ANALYTICS_SCENARIOS: AnalyticsScenario[] = [
 ];
 
 export const CLIENT_MARQUEE = [
+  'THE MACALLAN',
   'PAPARIZZA',
+  'THE ROSEATE',
   'REFUGE',
+  "MCDOWELL'S LUXURY",
   'PRANA',
   'LOCAL',
   'PERNOD RICARD',
@@ -670,12 +793,13 @@ export const CLIENT_MARQUEE = [
   '1800 TEQUILA',
   'THE LEELA PALACE',
   'ABSOLUT',
-  'BALLANTINE’S',
+  "BALLANTINE'S",
   'BUSHMILLS',
   'GAURAV GUPTA',
   'BIRD AUTOMOTIVE (BMW)',
-  '100 PIPERS',
   'JOSE CUERVO',
+  '100 PIPERS',
+  'THE FITNESS BAR',
   'COSY BOX',
   'INDIA ART FAIR',
   'SIDECAR',

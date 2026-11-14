@@ -3,6 +3,7 @@ import { ClientMarquee } from './components/ClientMarquee';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
+import { MotionSection } from './components/MotionSection';
 import { Navbar } from './components/Navbar';
 import { PortfolioSection } from './components/PortfolioSection';
 import { ProcessSection } from './components/ProcessSection';
@@ -22,6 +23,7 @@ export function App() {
         <Hero />
         <ClientMarquee />
         <PortfolioSection onCommissionCategory={setPreselectedService} />
+        <MotionSection />
         <ServicesSection onSelectServiceForBrief={setPreselectedService} />
         <ProcessSection />
         <ContactSection preselectedService={preselectedService} />

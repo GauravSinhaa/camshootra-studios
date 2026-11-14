@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
-  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Photography', href: '#portfolio' },
+  { label: 'Cinema & Motion', href: '#motion' },
   { label: 'Services', href: '#services' },
   { label: 'Methodology', href: '#process' },
 ];

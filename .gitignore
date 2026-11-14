@@ -27,6 +27,8 @@ dist-ssr
 # Vercel
 .vercel
 
-# Raw photo archives & zip files (prevent exceeding Vercel 100MB upload limits)
-Food and cocktail/
+# Raw photo archives & large source media (prevent exceeding GitHub/Vercel 100MB limits)
+/Food and cocktail/
+/videos/
 *.zip
+*.mov
